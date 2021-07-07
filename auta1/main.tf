@@ -14,9 +14,15 @@ variable "rg_name" {
   sensitive = true
 }
 
+variable "subscription_id" {
+  type = string
+  description = "Enter your subscrition id"
+  sensitive = true
+}
+
 provider "azurerm" {
   features {}
-  subscription_id = "ddbb2596-0ed0-44f5-9853-8855ceb1b75b"
+  subscription_id = var.subscription_id
 }
 
 resource "azurerm_resource_group" "rg" {
