@@ -26,7 +26,7 @@ provider "azurerm" {
 }
 
 resource "azurerm_resource_group" "rg" {
-  name    = "aulaiaccms"
+  name    = var.rg_name
   location = "eastus"
   tags = {
     provider = "azure"
